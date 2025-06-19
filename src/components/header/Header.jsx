@@ -33,7 +33,7 @@ const Header = () => {
 
                     <div className="flex items-center flex-none gap-4">
                         <NavLinks onLinkClick={handleLinkClick} />
-                        <ProductCart count={3} />
+                        <ProductCart />
                         <MenuToggleButton
                             isOpen={isMenuOpen}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}

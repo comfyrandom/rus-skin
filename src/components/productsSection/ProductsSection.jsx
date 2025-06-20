@@ -1,6 +1,6 @@
 const ProductsSection = ({ children }) => {
     return (
-        <section className="products-section flex flex-col md:flex-row gap-8">
+        <section className="products-section flex flex-col lg:flex-row gap-8">
             {children}
         </section>
     );

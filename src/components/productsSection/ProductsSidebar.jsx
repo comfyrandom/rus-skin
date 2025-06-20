@@ -1,6 +1,14 @@
-const ProductSidebar = () => {
+import React from "react";
+
+function ProductsSidebar({ className = "" }) {
     return (
-        <aside className="sidebar w-full md:w-[250px] md:max-h-[600px] md:overflow-y-auto bg-white rounded-xl p-4 shadow-[0_1px_4px_#e3ebfc,0_6px_16px_rgba(230,235,245,0.8)]">
+        <aside
+            className={`
+                sidebar bg-white rounded-xl p-4 shadow-[0_1px_4px_#e3ebfc,0_6px_16px_rgba(230,235,245,0.8)]
+                w-full lg:w-[250px] lg:max-h-[600px] lg:overflow-y-auto
+                ${className}
+            `}
+        >
             <h3 className="text-lg font-bold mb-4">Фильтры</h3>
 
             <div className="filter-group mb-4">
@@ -17,10 +25,7 @@ const ProductSidebar = () => {
                         placeholder="Макс"
                     />
                 </div>
-                <input
-                    type="range"
-                    className="w-full"
-                />
+                <input type="range" className="w-full" />
             </div>
 
             <div className="filter-group mb-4">
@@ -75,6 +80,6 @@ const ProductSidebar = () => {
             </div>
         </aside>
     );
-};
+}
 
-export default ProductSidebar;
+export default ProductsSidebar;

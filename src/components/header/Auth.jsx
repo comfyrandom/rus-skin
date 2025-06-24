@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import {getCurrentUser, getUserName, onAuthStateChange, signInWithEmail, signOut} from "../services/auth.service.js";
+import {getCurrentUser, getUserName, onAuthStateChange, signInWithEmail, signOut} from "../../services/auth.service.js";
 
 export const Auth = () => {
     const [user, setUser] = useState(null);

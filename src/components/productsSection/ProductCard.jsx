@@ -6,7 +6,7 @@ import { faBitcoin } from "@fortawesome/free-brands-svg-icons";
 const ProductCard = ({ product }) => {
     return (
         <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200 hover:shadow-md transition-all duration-300 flex flex-col h-full">
-            
+
             {/* Изображение товара */}
             <div className="relative overflow-hidden">
                 <img

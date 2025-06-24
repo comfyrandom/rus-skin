@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import {Link} from "react-router-dom";
-import CartService from "../../services/cartService.js";
+import CartService from "../../services/cart.service.js";
 
 const ProductCart = ({ className = "" }) => {
     const itemsCount = CartService.getTotalItems();

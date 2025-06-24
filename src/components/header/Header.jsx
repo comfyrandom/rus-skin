@@ -4,6 +4,7 @@ import SearchBar from './SearchBar.jsx';
 import ProductCart from './ProductCart.jsx';
 import NavLinks from './NavLinks.jsx';
 import MenuToggleButton from './MenuToggleButton.jsx';
+import {Auth} from "../Auth.jsx";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +39,7 @@ const Header = () => {
                             isOpen={isMenuOpen}
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         />
+                        <Auth />
                     </div>
                 </div>
 

@@ -1,9 +1,28 @@
-const ProductsControls = () => {
+const ProductsControls = ({products}) => {
+
+    const count = products.length;
+
+    const getCorrectWordForm = (number) => {
+        const lastDigit = number % 10;
+        const lastTwoDigits = number % 100;
+
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
+            return 'образов';
+        }
+        if (lastDigit === 1) {
+            return 'образ';
+        }
+        if (lastDigit >= 2 && lastDigit <= 4) {
+            return 'образа';
+        }
+        return 'образов';
+    };
+
     return (
         <div className="products-controls flex justify-between items-center mb-4">
             <div>
                 <span>Найдено: </span>
-                <strong>12 образов</strong>
+                <strong>{count} {getCorrectWordForm(count)}</strong>
             </div>
             <select className="sort-select p-2 border border-gray-200 rounded text-sm">
                 <option>Сортировать: По цене (возр.)</option>

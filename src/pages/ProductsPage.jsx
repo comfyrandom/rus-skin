@@ -1,22 +1,22 @@
 import ProductsSection from "../components/productsSection/ProductsSection.jsx";
 import { ProductsCollection } from "../components/productsSection/ProductsCollection.jsx";
-import { useState } from "react";
-import ProductsSidebar from "../components/productsSection/ProductsSidebar.jsx";
 
 function ProductsPage() {
-    const [showSidebar, setShowSidebar] = useState(false);
+
+    const products = [
+        {
+            id: 1,
+            title: "Екатерина Смирнова",
+            location: "Москва",
+            owner: 'РосШкур',
+            price: 1999.99,
+            image: "https://grevrwdhbvzyevkdvoig.supabase.co/storage/v1/object/public/product-pictures/russian_wives/1.webp",
+        },
+    ];
 
     return (
         <ProductsSection>
-            <button
-                className="lg:hidden mb-4 px-4 py-2 bg-blue-500 text-white rounded"
-                onClick={() => setShowSidebar(!showSidebar)}
-            >
-                {showSidebar ? "Закрыть фильтры" : "Открыть фильтры"}
-            </button>
-
-            <ProductsSidebar className={`${showSidebar ? "block" : "hidden"} lg:block`} />
-            <ProductsCollection />
+            <ProductsCollection products={products} />
         </ProductsSection>
     );
 }
